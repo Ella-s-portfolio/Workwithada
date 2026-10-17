@@ -275,7 +275,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
   display: grid; grid-template-columns: .9fr 1.1fr; gap: clamp(40px, 7vw, 120px); align-items: center;
   padding: clamp(80px, 10vw, 140px) var(--gutter);
   background: var(--blush);
-  border-radius: clamp(28px, 4vw, 56px) clamp(28px, 4vw, 56px) 0 0;
+  border-radius: clamp(28px, 4vw, 56px);
 }
 .about__visual { position: relative; padding-bottom: 60px; max-width: 460px; justify-self: center; width: 100%; }
 .arch--about { aspect-ratio: 3 / 4; border: 8px solid var(--cream); }
@@ -296,7 +296,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
 /* ==========================================================
    PHOTOGRAPHY
    ========================================================== */
-.photos { padding: clamp(80px, 10vw, 140px) 0; background: var(--blush); }
+.photos { padding: clamp(80px, 10vw, 140px) 0; background: var(--blush); border-radius: clamp(28px, 4vw, 56px) clamp(28px, 4vw, 56px) 0 0; }
 .photo-grid {
   display: grid; gap: clamp(12px, 1.6vw, 22px);
   grid-template-columns: repeat(12, 1fr);
