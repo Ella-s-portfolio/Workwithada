@@ -341,13 +341,15 @@ button { font: inherit; color: inherit; cursor: pointer; }
    ========================================================== */
 .brands { padding: clamp(80px, 10vw, 140px) 0 clamp(40px, 6vw, 80px); }
 .brand-grid {
-  display: grid; grid-template-columns: repeat(7, 1fr); gap: clamp(10px, 1.4vw, 18px);
+  --cols: 7; --gap: clamp(10px, 1.4vw, 18px);
+  display: flex; flex-wrap: wrap; justify-content: center; gap: var(--gap);
   padding: 0 var(--gutter);
 }
 .brand {
+  width: calc((100% - (var(--cols) - 1) * var(--gap)) / var(--cols));
   aspect-ratio: 1; border-radius: 18px; overflow: hidden;
   background: #fff; border: 1px solid var(--line);
-  display: grid; place-items: center; padding: 12%;
+  display: grid; place-items: center;
   transition: transform .5s var(--ease), box-shadow .5s var(--ease);
 }
 .brand { position: relative; }
@@ -461,7 +463,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
   .about { grid-template-columns: 1fr; }
   .about__polaroid { right: -10px; }
   .service-list { grid-template-columns: 1fr; }
-  .brand-grid { grid-template-columns: repeat(3, 1fr); }
+  .brand-grid { --cols: 3; }
   .photo-grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 200px; }
   .ph--a, .ph--b, .ph--c, .ph--d, .ph--e { grid-column: auto; grid-row: span 1; }
   .ph--a { grid-column: 1 / -1; grid-row: span 2; }
@@ -480,7 +482,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
   .reel__top, .reel__bottom { left: 12px; right: 12px; }
   .reel__bottom { right: 52px; }
   .reel__play { width: 50px; height: 50px; margin: -25px 0 0 -25px; }
-  .brand-grid { grid-template-columns: repeat(3, 1fr); }
+  .brand-grid { --cols: 3; }
   .quotes { grid-template-columns: 1fr; }
   .quote:nth-child(even) { margin-top: 0; }
   .hero__cta .btn { flex: 1; }

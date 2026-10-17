@@ -3,7 +3,7 @@
    video:    direct link to an .mp4 (or a file in assets/videos/).
              Google Drive and Dropbox share links are converted automatically.
    poster:   image shown before the video loads.
-   category: skincare | fashion | lifestyle | wellness  (display names in CATEGORY_LABELS)
+   category: skincare | lifestyle | fashion | fragrance | wellness  (display names in CATEGORY_LABELS)
    brand:    optional, shown under the title.
    ========================================================== */
 const WORK = [
@@ -21,9 +21,23 @@ const WORK = [
   { title: "New hairstyle",             brand: "",               category: "lifestyle", poster: "assets/img/lifestyle-04.jpg", video: "assets/videos/lifestyle-04.mp4" },
   { title: "Lip combo",                 brand: "",               category: "lifestyle", poster: "assets/img/lifestyle-05.jpg", video: "assets/videos/lifestyle-05.mp4" },
   { title: "Cozy evening routine",      brand: "Closeup",        category: "lifestyle", poster: "assets/img/lifestyle-06.jpg", video: "assets/videos/lifestyle-06.mp4" },
-  { title: "Soft-girl styling",   brand: "", category: "fashion",   poster: "assets/img/white-dress.jpg",      video: "" },
+  { title: "Weekend vlog",              brand: "",               category: "lifestyle", poster: "assets/img/lifestyle-07.jpg", video: "assets/videos/lifestyle-07.mp4" },
+  { title: "Lip combo of the day",      brand: "Blossom Makeups", category: "lifestyle", poster: "assets/img/lifestyle-08.jpg", video: "assets/videos/lifestyle-08.mp4" },
+  { title: "June recap",                brand: "",               category: "lifestyle", poster: "assets/img/lifestyle-09.jpg", video: "assets/videos/lifestyle-09.mp4" },
+  { title: "Makeup transition",         brand: "",               category: "lifestyle", poster: "assets/img/lifestyle-10.jpg", video: "assets/videos/lifestyle-10.mp4" },
+  { title: "GRWM for church",           brand: "",               category: "lifestyle", poster: "assets/img/lifestyle-11.jpg", video: "assets/videos/lifestyle-11.mp4" },
+  { title: "Outfit of the day",         brand: "",               category: "fashion",   poster: "assets/img/fashion-01.jpg", video: "assets/videos/fashion-01.mp4" },
+  { title: "Red dress OOTD",            brand: "",               category: "fashion",   poster: "assets/img/fashion-02.jpg", video: "assets/videos/fashion-02.mp4" },
+  { title: "Clean-girl white fit",      brand: "",               category: "fashion",   poster: "assets/img/fashion-03.jpg", video: "assets/videos/fashion-03.mp4" },
+  { title: "Brunch outfit transition",  brand: "",               category: "fashion",   poster: "assets/img/fashion-04.jpg", video: "assets/videos/fashion-04.mp4" },
+  { title: "Saheeb review",             brand: "",               category: "fragrance", poster: "assets/img/fragrance-01.jpg", video: "assets/videos/fragrance-01.mp4" },
+  { title: "Caramel Cascade review",    brand: "",               category: "fragrance", poster: "assets/img/fragrance-02.jpg", video: "assets/videos/fragrance-02.mp4" },
+  { title: "Violet Blossom",            brand: "Zara",           category: "fragrance", poster: "assets/img/fragrance-03.jpg", video: "assets/videos/fragrance-03.mp4" },
+  { title: "Khair Fusion review",       brand: "Paris Corner",   category: "fragrance", poster: "assets/img/fragrance-04.jpg", video: "" },
+  { title: "Fusion & Flood body sprays", brand: "Storm",          category: "fragrance", poster: "assets/img/fragrance-05.jpg", video: "assets/videos/fragrance-05.mp4" },
+  { title: "Venom × Live pairing",      brand: "Riggs × Confetti", category: "fragrance", poster: "assets/img/fragrance-06.jpg", video: "assets/videos/fragrance-06.mp4" },
+  { title: "Three Lattafa moods",       brand: "Lattafa",        category: "fragrance", poster: "assets/img/fragrance-07.jpg", video: "assets/videos/fragrance-07.mp4" },
   { title: "Self-care routine",   brand: "", category: "wellness",  poster: "assets/img/pink-headband.jpg",    video: "" },
-  { title: "Garden fit",          brand: "", category: "fashion",   poster: "assets/img/green-dress.jpg",      video: "" },
   { title: "Everyday glow",       brand: "", category: "wellness",  poster: "assets/img/floral-top.jpg",       video: "" },
 ];
 
