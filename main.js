@@ -3,7 +3,7 @@
    video:    direct link to an .mp4 (or a file in assets/videos/).
              Google Drive and Dropbox share links are converted automatically.
    poster:   image shown before the video loads.
-   category: skincare | fashion | lifestyle | wellness
+   category: skincare | fashion | lifestyle | wellness  (display names in CATEGORY_LABELS)
    brand:    optional, shown under the title.
    ========================================================== */
 const WORK = [
@@ -15,11 +15,15 @@ const WORK = [
   { title: "How to layer skincare",     brand: "",               category: "skincare", poster: "assets/img/skincare-06.jpg", video: "assets/videos/skincare-06.mp4" },
   { title: "PR package unboxing",       brand: "",               category: "skincare", poster: "assets/img/skincare-07.jpg", video: "assets/videos/skincare-07.mp4" },
   { title: "SPF body lotion",           brand: "Karis Naturals", category: "skincare", poster: "assets/img/skincare-08.jpg", video: "assets/videos/skincare-08.mp4" },
+  { title: "Dental check-up",           brand: "Leza Dental",    category: "lifestyle", poster: "assets/img/lifestyle-01.jpg", video: "assets/videos/lifestyle-01.mp4" },
+  { title: "GRWM for school",           brand: "",               category: "lifestyle", poster: "assets/img/lifestyle-02.jpg", video: "assets/videos/lifestyle-02.mp4" },
+  { title: "Self-care spa day",         brand: "Spa Imperial",   category: "lifestyle", poster: "assets/img/lifestyle-03.jpg", video: "assets/videos/lifestyle-03.mp4" },
+  { title: "New hairstyle",             brand: "",               category: "lifestyle", poster: "assets/img/lifestyle-04.jpg", video: "assets/videos/lifestyle-04.mp4" },
+  { title: "Lip combo",                 brand: "",               category: "lifestyle", poster: "assets/img/lifestyle-05.jpg", video: "assets/videos/lifestyle-05.mp4" },
+  { title: "Cozy evening routine",      brand: "Closeup",        category: "lifestyle", poster: "assets/img/lifestyle-06.jpg", video: "assets/videos/lifestyle-06.mp4" },
   { title: "Soft-girl styling",   brand: "", category: "fashion",   poster: "assets/img/white-dress.jpg",      video: "" },
   { title: "Self-care routine",   brand: "", category: "wellness",  poster: "assets/img/pink-headband.jpg",    video: "" },
-  { title: "Golden hour",         brand: "", category: "lifestyle", poster: "assets/img/staircase.jpg",        video: "" },
   { title: "Garden fit",          brand: "", category: "fashion",   poster: "assets/img/green-dress.jpg",      video: "" },
-  { title: "Slow Sunday",         brand: "", category: "lifestyle", poster: "assets/img/egg-chair.jpg",        video: "" },
   { title: "Everyday glow",       brand: "", category: "wellness",  poster: "assets/img/floral-top.jpg",       video: "" },
 ];
 
@@ -41,7 +45,8 @@ const ICON_SOUND = '<svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3Zm13.5
 
 /* ---------- build reels ---------- */
 const reelsEl = $("#reels");
-const label = (c) => c.charAt(0).toUpperCase() + c.slice(1);
+const CATEGORY_LABELS = { lifestyle: "Lifestyle & Beauty" };
+const label = (c) => CATEGORY_LABELS[c] || c.charAt(0).toUpperCase() + c.slice(1);
 
 reelsEl.innerHTML = WORK.map((w, i) => {
   const src = directVideoUrl(w.video);
