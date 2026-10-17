@@ -341,7 +341,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
    ========================================================== */
 .brands { padding: clamp(80px, 10vw, 140px) 0 clamp(40px, 6vw, 80px); }
 .brand-grid {
-  display: grid; grid-template-columns: repeat(6, 1fr); gap: clamp(10px, 1.4vw, 18px);
+  display: grid; grid-template-columns: repeat(7, 1fr); gap: clamp(10px, 1.4vw, 18px);
   padding: 0 var(--gutter);
 }
 .brand {
@@ -350,9 +350,12 @@ button { font: inherit; color: inherit; cursor: pointer; }
   display: grid; place-items: center; padding: 12%;
   transition: transform .5s var(--ease), box-shadow .5s var(--ease);
 }
-.brand img { width: 100%; height: 100%; object-fit: contain; }
+.brand { position: relative; }
+.brand img { position: absolute; inset: 14%; width: 72%; height: 72%; object-fit: contain; }
 .brand--fill { padding: 0; border: 0; }
-.brand--fill img { object-fit: cover; }
+.brand--fill img { inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.brand--black { background: #000; border: 0; }
+.brand--black img { inset: 6%; width: 88%; height: 88%; }
 .brand:hover { transform: translateY(-6px) rotate(-1.5deg); box-shadow: 0 20px 40px -20px rgba(85, 46, 161, .5); }
 
 /* ==========================================================
@@ -446,7 +449,6 @@ button { font: inherit; color: inherit; cursor: pointer; }
   .reels { grid-template-columns: repeat(3, 1fr); }
   .reels .reel:nth-child(n) { margin-top: 0; }
   .reels .reel:nth-child(3n + 2) { margin-top: 60px; }
-  .brand-grid { grid-template-columns: repeat(4, 1fr); }
   .quotes { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 860px) {
@@ -459,6 +461,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
   .about { grid-template-columns: 1fr; }
   .about__polaroid { right: -10px; }
   .service-list { grid-template-columns: 1fr; }
+  .brand-grid { grid-template-columns: repeat(3, 1fr); }
   .photo-grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 200px; }
   .ph--a, .ph--b, .ph--c, .ph--d, .ph--e { grid-column: auto; grid-row: span 1; }
   .ph--a { grid-column: 1 / -1; grid-row: span 2; }
