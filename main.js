@@ -3,7 +3,7 @@
    video:    direct link to an .mp4 (or a file in assets/videos/).
              Google Drive and Dropbox share links are converted automatically.
    poster:   image shown before the video loads.
-   category: skincare | lifestyle | fashion | fragrance | wellness  (display names in CATEGORY_LABELS)
+   category: skincare | lifestyle | fashion | fragrance  (display names in CATEGORY_LABELS)
    brand:    optional, shown under the title.
    ========================================================== */
 const WORK = [
@@ -37,8 +37,6 @@ const WORK = [
   { title: "Fusion & Flood body sprays", brand: "Storm",          category: "fragrance", poster: "assets/img/fragrance-05.jpg", video: "assets/videos/fragrance-05.mp4" },
   { title: "Venom × Live pairing",      brand: "Riggs × Confetti", category: "fragrance", poster: "assets/img/fragrance-06.jpg", video: "assets/videos/fragrance-06.mp4" },
   { title: "Three Lattafa moods",       brand: "Lattafa",        category: "fragrance", poster: "assets/img/fragrance-07.jpg", video: "assets/videos/fragrance-07.mp4" },
-  { title: "Self-care routine",   brand: "", category: "wellness",  poster: "assets/img/pink-headband.jpg",    video: "" },
-  { title: "Everyday glow",       brand: "", category: "wellness",  poster: "assets/img/floral-top.jpg",       video: "" },
 ];
 
 /* ---------- helpers ---------- */
